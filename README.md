@@ -1,3 +1,7 @@
-# Pizza Must & Crêp'N Street — maquette
+# Pizza Must & Crêp'N Street
 
-Maquette statique de test (MVP). Ouvrir `index.html`.
+Site statique de test.
+
+- `/` : accueil Pizza Must
+- `/carte.html` : carte des pizzas
+- `/crepn-street/` : Crêp'N Street
