@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Pizza Must &amp; Crêp'N Street — maquette</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Black+Ops+One&amp;family=DM+Sans:wght@400;700&amp;display=swap">
+<style>
+:root { --ink: #1E1D1B; --cream: #F4E9D8; --red: #BF2A1F; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--ink); color: var(--cream); font-family: 'DM Sans', system-ui, sans-serif; }
+main { max-width: 1080px; margin: 0 auto; padding: 56px 16px 72px; }
+.kicker { font-size: 14px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E08A1E; }
+h1 { margin: 12px 0 8px; font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: clamp(44px, 9vw, 96px); line-height: 0.95; text-transform: uppercase; }
+h1 span { color: var(--red); }
+p.lead { margin: 0 0 40px; font-size: 18px; color: #D6D0C6; }
+h2 { margin: 40px 0 14px; font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 28px; text-transform: uppercase; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px; }
+a.card { display: flex; flex-direction: column; gap: 6px; padding: 20px; border-radius: 14px; background: #2A2826; border: 2px solid #3A3733; color: var(--cream); text-decoration: none; transition: transform .15s, border-color .15s; }
+a.card:hover { transform: translateY(-3px); border-color: #E08A1E; }
+a.card strong { font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 22px; text-transform: uppercase; }
+a.card span { font-size: 14px; color: #B9B1A5; }
+.note { margin-top: 48px; font-size: 14px; color: #8F877C; }
+</style>
+</head>
+<body>
+<main>
+  <span class="kicker">Maquette MVP · version de test</span>
+  <h1>Pizza Must <span>&amp;</span> Crêp'N Street</h1>
+  <p class="lead">Deux sites reliés · 13 et 13 bis avenue de la Marne, Épinay-sur-Seine</p>
+
+  <h2>Site 1 · Pizza Must</h2>
+  <div class="grid">
+    <a class="card" href="Main.dc.html"><strong>Accueil · ordinateur</strong><span>Bandeau, incontournables, menus, avis, accès</span></a>
+    <a class="card" href="Carte-Pizzeria.dc.html"><strong>La carte · ordinateur</strong><span>39 pizzas avec photos et prix</span></a>
+    <a class="card" href="Mobile-Accueil.dc.html"><strong>Accueil · mobile</strong><span>À ouvrir sur un téléphone</span></a>
+    <a class="card" href="Mobile-Carte-Pizzeria.dc.html"><strong>La carte · mobile</strong><span>À ouvrir sur un téléphone</span></a>
+  </div>
+
+  <h2>Site 2 · Crêp'N Street</h2>
+  <div class="grid">
+    <a class="card" href="Crepe-Accueil.dc.html"><strong>Accueil · ordinateur</strong><span>Muret, signatures, compose ta crêpe</span></a>
+    <a class="card" href="Crepe-Mobile-Accueil.dc.html"><strong>Accueil · mobile</strong><span>À ouvrir sur un téléphone</span></a>
+  </div>
+
+  <p class="note">Maquette de travail : textes entre crochets à compléter, photos des crêpes à venir. Les écrans « mobile » sont dessinés en 390 px de large.</p>
+</main>
+</body>
+</html>
