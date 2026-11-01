@@ -52,6 +52,12 @@ nav[aria-label="Catégories de la carte"]{top:var(--hh,0px) !important;z-index:3
 .burger .i-close{display:none}
 .burger[aria-expanded="true"] .i-open{display:none}
 .burger[aria-expanded="true"] .i-close{display:block}
+
+.skip{position:absolute;left:-9999px;top:12px;z-index:100;background:#1E1D1B;color:#FFFFFF !important;padding:12px 18px;border-radius:8px;font-family:'DM Sans',sans-serif;font-weight:700;text-decoration:none}
+.skip:focus{left:12px}
+a:focus-visible,button:focus-visible{outline:3px solid #FFB547;outline-offset:2px;box-shadow:0 0 0 6px #1E1D1B;border-radius:6px}
+nav[aria-label="Catégories de la carte"] a{background:transparent !important;color:#1E1D1B !important;border:2px solid #1E1D1B !important;box-sizing:border-box}
+nav[aria-label="Catégories de la carte"] a[aria-current="true"]{background:#1E1D1B !important;color:#FFFFFF !important}
 </style>
 <link rel="canonical" href="https://ojerroud.github.io/pizza-must/crepn-street/">
 <link rel="icon" type="image/svg+xml" href="../favicon-crepe.svg">
@@ -136,6 +142,7 @@ nav[aria-label="Catégories de la carte"]{top:var(--hh,0px) !important;z-index:3
 </script>
 </head>
 <body>
+<a class="skip" href="#contenu">Aller au contenu</a>
 
 
 <div class="ardoise" style="font-family: 'DM Sans', system-ui, sans-serif; color: #FFFFFF; min-height: 100vh;">
@@ -160,6 +167,7 @@ nav[aria-label="Catégories de la carte"]{top:var(--hh,0px) !important;z-index:3
       <a href="tel:+33630728756" style="display: inline-flex; align-items: center; gap: 8px; min-height: 50px; padding: 0 22px; border-radius: 6px; background: #D7261E; color: #FFFFFF; font-family: Anton, Impact, sans-serif; font-size: 20px; letter-spacing: 0.5px; text-decoration: none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>06 30 72 87 56</a><button type="button" class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-principal"><svg class="i-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg><svg class="i-close" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg></button>
     </div>
   </header>
+  <main id="contenu">
 
   <section class="muret" aria-label="Présentation" style="">
     <div style="max-width: 1240px; margin: 0 auto; padding: 64px 24px 72px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
@@ -416,6 +424,7 @@ nav[aria-label="Catégories de la carte"]{top:var(--hh,0px) !important;z-index:3
     </div>
   </section>
 
+  </main>
   <footer style="background: #141415; color: #D6D0C6; font-size: 14px; border-top: 4px solid #D7261E;">
     <div style="max-width: 1240px; margin: 0 auto; padding: 40px 24px; display: flex; flex-wrap: wrap; gap: 16px 40px; justify-content: space-between; align-items: center;">
       <span>© Crêp'N Street · 13 bis avenue de la Marne · Épinay-sur-Seine</span>
@@ -452,4 +461,16 @@ nav[aria-label="Catégories de la carte"]{top:var(--hh,0px) !important;z-index:3
 })();
 </script>
 
+<script>
+(function () {
+  var liens = document.querySelectorAll('nav[aria-label="Catégories de la carte"] a[href^="#"]');
+  if (!liens.length || !window.IntersectionObserver) return;
+  function actif(id) { liens.forEach(function (a) { if (a.getAttribute('href') === '#' + id) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); }); }
+  actif(liens[0].getAttribute('href').slice(1));
+  var obs = new IntersectionObserver(function (entrees) {
+    entrees.forEach(function (e) { if (e.isIntersecting) actif(e.target.id); });
+  }, { rootMargin: '-35% 0px -60% 0px' });
+  liens.forEach(function (a) { var s = document.getElementById(a.getAttribute('href').slice(1)); if (s) obs.observe(s); });
+})();
+</script>
 </body></html>

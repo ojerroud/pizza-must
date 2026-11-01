@@ -52,6 +52,12 @@ nav[aria-label="Catégories de la carte"]{top:var(--hh,0px) !important;z-index:3
 .burger .i-close{display:none}
 .burger[aria-expanded="true"] .i-open{display:none}
 .burger[aria-expanded="true"] .i-close{display:block}
+
+.skip{position:absolute;left:-9999px;top:12px;z-index:100;background:#1E1D1B;color:#FFFFFF !important;padding:12px 18px;border-radius:8px;font-family:'DM Sans',sans-serif;font-weight:700;text-decoration:none}
+.skip:focus{left:12px}
+a:focus-visible,button:focus-visible{outline:3px solid #FFB547;outline-offset:2px;box-shadow:0 0 0 6px #1E1D1B;border-radius:6px}
+nav[aria-label="Catégories de la carte"] a{background:transparent !important;color:#1E1D1B !important;border:2px solid #1E1D1B !important;box-sizing:border-box}
+nav[aria-label="Catégories de la carte"] a[aria-current="true"]{background:#1E1D1B !important;color:#FFFFFF !important}
 </style>
 <link rel="canonical" href="https://ojerroud.github.io/pizza-must/crepn-street/mentions-legales.html">
 <link rel="icon" type="image/svg+xml" href="../favicon-crepe.svg">
@@ -67,6 +73,7 @@ nav[aria-label="Catégories de la carte"]{top:var(--hh,0px) !important;z-index:3
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
+<a class="skip" href="#contenu">Aller au contenu</a>
 
 
 <div class="ardoise" style="font-family: 'DM Sans', system-ui, sans-serif; color: #FFFFFF; min-height: 100vh;">
@@ -128,4 +135,16 @@ nav[aria-label="Catégories de la carte"]{top:var(--hh,0px) !important;z-index:3
 })();
 </script>
 
+<script>
+(function () {
+  var liens = document.querySelectorAll('nav[aria-label="Catégories de la carte"] a[href^="#"]');
+  if (!liens.length || !window.IntersectionObserver) return;
+  function actif(id) { liens.forEach(function (a) { if (a.getAttribute('href') === '#' + id) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); }); }
+  actif(liens[0].getAttribute('href').slice(1));
+  var obs = new IntersectionObserver(function (entrees) {
+    entrees.forEach(function (e) { if (e.isIntersecting) actif(e.target.id); });
+  }, { rootMargin: '-35% 0px -60% 0px' });
+  liens.forEach(function (a) { var s = document.getElementById(a.getAttribute('href').slice(1)); if (s) obs.observe(s); });
+})();
+</script>
 </body></html>
