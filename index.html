@@ -36,12 +36,18 @@ nav[aria-label="Catégories de la carte"]{top:var(--hh,0px) !important;z-index:3
   header > div{padding:8px 16px !important;gap:8px 12px !important}
   header a[aria-label$="accueil"] > span + span{display:none}
   header a[aria-label$="accueil"] > span:first-child{width:52px !important;height:52px !important;font-size:14px !important}
+  .h-long{display:none !important}
+  .h-court{display:inline !important}
+  .bandeau-infos > div{padding:7px 14px !important;flex-wrap:nowrap !important;gap:10px !important;font-size:12.5px !important}
+  .bandeau-infos > div > span{gap:6px !important;white-space:nowrap}
+  .bandeau-infos > div > a{gap:6px !important;flex:none}
   header > div > div, header > div > a[href^="tel:"]{display:none !important}
   .burger{display:flex !important}
   header nav{display:none !important;order:4;width:100%;flex-direction:column !important;flex-wrap:nowrap !important;gap:0 !important;padding:4px 0 10px}
   header nav.ouvert{display:flex !important}
   header nav a{padding:14px 2px;border-top:1px solid rgba(128,128,128,.3);font-size:22px}
 }
+.h-court{display:none}
 .burger{display:none;width:48px;height:48px;align-items:center;justify-content:center;border-radius:8px;border:2px solid currentColor;background:transparent;color:inherit;cursor:pointer;padding:0}
 .burger .i-close{display:none}
 .burger[aria-expanded="true"] .i-open{display:none}
@@ -53,10 +59,10 @@ nav[aria-label="Catégories de la carte"]{top:var(--hh,0px) !important;z-index:3
 
 <div class="papier" style="font-family: 'DM Sans', system-ui, sans-serif; color: #1E1D1B; min-height: 100vh;">
 
-  <div style="background: #1E1D1B; color: #EDE6DA; font-size: 14px;">
+  <div class="bandeau-infos" style="background: #1E1D1B; color: #EDE6DA; font-size: 14px;">
     <div style="max-width: 1240px; margin: 0 auto; padding: 8px 24px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; align-items: center;">
-      <span style="display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Ouvert 7j/7 · 11h30–14h et 18h–23h · Week-end non-stop</span>
-      <a href="crepn-street/" style="display: inline-flex; align-items: center; gap: 10px; color: #EDE6DA; text-decoration: none;">Notre crêperie voisine<span style="padding: 3px 8px; border-radius: 4px; border: 2px solid #6E7378; background: linear-gradient(180deg, #ECEEF0 0%, #A9AEB4 52%, #D3D6DA 100%); font-family: 'Black Ops One', Impact, sans-serif; font-size: 13px; color: #2B2D30;">CRÊP'N STREET</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+      <span style="display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span class="h-long">Ouvert 7j/7 · 11h30–14h et 18h–23h · Week-end non-stop</span><span class="h-court">7j/7 · 11h30–14h · 18h–23h</span></span>
+      <a href="crepn-street/" style="display: inline-flex; align-items: center; gap: 10px; color: #EDE6DA; text-decoration: none;"><span class="h-long">Notre crêperie voisine</span><span style="padding: 3px 8px; border-radius: 4px; border: 2px solid #6E7378; background: linear-gradient(180deg, #ECEEF0 0%, #A9AEB4 52%, #D3D6DA 100%); font-family: 'Black Ops One', Impact, sans-serif; font-size: 13px; color: #2B2D30;">CRÊP'N STREET</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
     </div>
   </div>
 
