@@ -61,6 +61,11 @@ nav[aria-label="Catégories de la carte"]{top:var(--hh,0px) !important;z-index:3
 a:focus-visible,button:focus-visible{outline:3px solid #FFB547;outline-offset:2px;box-shadow:0 0 0 6px #1E1D1B;border-radius:6px}
 nav[aria-label="Catégories de la carte"] a{background:transparent !important;color:#1E1D1B !important;border:2px solid #1E1D1B !important;box-sizing:border-box}
 nav[aria-label="Catégories de la carte"] a[aria-current="true"]{background:#1E1D1B !important;color:#FFFFFF !important}
+@media (max-width:700px){
+  nav[aria-label="Catégories de la carte"] > div{flex-wrap:nowrap !important;overflow-x:auto;scrollbar-width:none;padding:10px 16px !important;gap:8px !important}
+  nav[aria-label="Catégories de la carte"] > div > span{display:none !important}
+  nav[aria-label="Catégories de la carte"] a{white-space:nowrap;font-size:15px !important;padding:0 12px !important}
+}
 </style>
 <link rel="canonical" href="https://ojerroud.github.io/pizza-must/carte.html">
 <link rel="icon" type="image/svg+xml" href="favicon-pizza.svg">

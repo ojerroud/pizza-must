@@ -58,6 +58,11 @@ nav[aria-label="Catégories de la carte"]{top:var(--hh,0px) !important;z-index:3
 a:focus-visible,button:focus-visible{outline:3px solid #FFB547;outline-offset:2px;box-shadow:0 0 0 6px #1E1D1B;border-radius:6px}
 nav[aria-label="Catégories de la carte"] a{background:transparent !important;color:#1E1D1B !important;border:2px solid #1E1D1B !important;box-sizing:border-box}
 nav[aria-label="Catégories de la carte"] a[aria-current="true"]{background:#1E1D1B !important;color:#FFFFFF !important}
+@media (max-width:700px){
+  nav[aria-label="Catégories de la carte"] > div{flex-wrap:nowrap !important;overflow-x:auto;scrollbar-width:none;padding:10px 16px !important;gap:8px !important}
+  nav[aria-label="Catégories de la carte"] > div > span{display:none !important}
+  nav[aria-label="Catégories de la carte"] a{white-space:nowrap;font-size:15px !important;padding:0 12px !important}
+}
 </style>
 <link rel="canonical" href="https://ojerroud.github.io/pizza-must/crepn-street/allergenes.html">
 <link rel="icon" type="image/svg+xml" href="../favicon-crepe.svg">
@@ -89,10 +94,10 @@ nav[aria-label="Catégories de la carte"] a[aria-current="true"]{background:#1E1
     <div style="max-width: 1240px; margin: 0 auto; padding: 12px 24px; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between;">
       <a href="./" aria-label="Crêp'N Street, accueil" style="padding: 8px 16px; border-radius: 6px; border: 3px solid #6E7378; background: linear-gradient(180deg, #ECEEF0 0%, #A9AEB4 52%, #D3D6DA 100%); font-family: 'Black Ops One', Impact, sans-serif; font-size: 22px; line-height: 0.95; color: #2B2D30; text-decoration: none; text-align: center;">CRÊP'N<br>STREET</a>
       <nav id="menu-principal" aria-label="Navigation principale" style="display: flex; flex-wrap: wrap; gap: 8px 26px; font-family: Anton, Impact, sans-serif; font-size: 18px; letter-spacing: 0.5px; text-transform: uppercase;">
-        <a href="index.html#salees" style="text-decoration: none;">Salées</a>
-        <a href="index.html#sucrees" style="text-decoration: none;">Sucrées</a>
-        <a href="index.html#compose" style="text-decoration: none;">Compose ta crêpe</a>
-        <a href="index.html#burger" style="text-decoration: none;">Burger &amp; boissons</a>
+        <a href="carte.html#salees" style="text-decoration: none;">Salées</a>
+        <a href="carte.html#sucrees" style="text-decoration: none;">Sucrées</a>
+        <a href="carte.html#compose" style="text-decoration: none;">Compose ta crêpe</a>
+        <a href="carte.html#burger" style="text-decoration: none;">Burger &amp; boissons</a>
         <a href="index.html#infos" style="text-decoration: none;">Infos</a>
       <a class="lien-voisin" href="../" style="text-decoration: none;"><span style="width: 40px; height: 40px; flex: none; border-radius: 50%; border: 2px solid #1E1D1B; background: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 0.9; font-family: Anton, Impact, sans-serif; font-size: 10px; color: #1E1D1B;"><span>PIZZA</span><span style="color: #BF2A1F;">MUST</span></span>Notre pizzeria voisine<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-left:auto;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a></nav>
       <a href="tel:+33630728756" style="display: inline-flex; align-items: center; gap: 8px; min-height: 50px; padding: 0 22px; border-radius: 6px; background: #D7261E; color: #FFFFFF; font-family: Anton, Impact, sans-serif; font-size: 20px; letter-spacing: 0.5px; text-decoration: none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>06 30 72 87 56</a><button type="button" class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-principal"><svg class="i-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg><svg class="i-close" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg></button>
