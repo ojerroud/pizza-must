@@ -74,6 +74,25 @@ nav[aria-label="Catégories de la carte"] a[aria-current="true"]{background:#1E1
 
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 html:has(nav[aria-label="Catégories de la carte"]){scroll-padding-top:calc(var(--hh,0px) + 84px)}
+
+.fumant{position:relative;display:flex;flex:none;justify-content:center;align-items:center}
+.vapeur{position:absolute;left:50%;top:-42%;width:56%;height:90%;transform:translateX(-50%);pointer-events:none;z-index:2}
+.vapeur i{position:absolute;bottom:0;width:30%;height:60%;border-radius:50%;opacity:0;
+  background:radial-gradient(ellipse at center,rgba(255,255,255,.95) 0%,rgba(205,193,180,.5) 42%,rgba(255,255,255,0) 70%);filter:blur(6px)}
+.vapeur i:nth-child(1){left:14%}
+.vapeur i:nth-child(2){left:40%;height:84%}
+.vapeur i:nth-child(3){left:64%}
+@media (prefers-reduced-motion:no-preference){
+  .fumant.actif .vapeur i{animation:vapeur 3.8s ease-in infinite}
+  .fumant.actif .vapeur i:nth-child(2){animation-delay:1.25s}
+  .fumant.actif .vapeur i:nth-child(3){animation-delay:2.5s}
+}
+@keyframes vapeur{
+  0%{transform:translateY(10%) scaleX(.8) rotate(0deg);opacity:0}
+  18%{opacity:1}
+  60%{transform:translateY(-70%) scaleX(1.3) rotate(-6deg);opacity:.7}
+  100%{transform:translateY(-130%) scaleX(1.7) rotate(5deg);opacity:0}
+}
 </style>
 <link rel="canonical" href="https://ojerroud.github.io/pizza-must/">
 <link rel="icon" type="image/svg+xml" href="favicon-pizza.svg">
@@ -196,7 +215,7 @@ html:has(nav[aria-label="Catégories de la carte"]){scroll-padding-top:calc(var(
         </div>
       </div>
       <div style="flex: 1 1 420px; min-width: 0; position: relative; display: flex; justify-content: center; min-height: 440px;">
-        <div style="width: 440px; max-width: 100%; aspect-ratio: 1 / 1; border-radius: 50%; background: #FFFFFF; box-shadow: 0 18px 0 rgba(0, 0, 0, 0.18), 0 0 0 10px rgba(255, 255, 255, 0.18); display: flex; align-items: center; justify-content: center; overflow: hidden;"><img width="400" height="213" decoding="async" fetchpriority="high" src="img/western.webp" alt="Pizza Western" style="width: 96%; height: auto; display: block;"></div>
+        <div class="fumant"><div style="width: 440px; max-width: 100%; aspect-ratio: 1 / 1; border-radius: 50%; background: #FFFFFF; box-shadow: 0 18px 0 rgba(0, 0, 0, 0.18), 0 0 0 10px rgba(255, 255, 255, 0.18); display: flex; align-items: center; justify-content: center; overflow: hidden;"><img width="400" height="213" decoding="async" fetchpriority="high" src="img/western.webp" alt="Pizza Western" style="width: 96%; height: auto; display: block;"></div><span class="vapeur" aria-hidden="true"><i></i><i></i><i></i></span></div>
         <div style="position: absolute; left: 0; bottom: 10px; width: 170px; height: 170px; border-radius: 50%; background: #FFFFFF; color: #1E1D1B; transform: rotate(-12deg); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-family: Anton, Impact, sans-serif; line-height: 1; box-shadow: 0 8px 0 rgba(0, 0, 0, 0.2);"><span style="font-size: 17px;">1 PIZZA ACHETÉE</span><span style="font-size: 40px; color: #BF2A1F; margin: 2px 0;">=</span><span style="font-size: 17px;">1 PIZZA OFFERTE*</span></div>
       </div>
     </div>
@@ -212,7 +231,7 @@ html:has(nav[aria-label="Catégories de la carte"]){scroll-padding-top:calc(var(
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 32px 24px;">
       <article style="display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center;">
           <h3 style="position: relative; margin: 0; align-self: stretch; border: 3px solid #1E1D1B; border-radius: 10px; background: #FFFFFF; padding: 8px 12px; font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 24px; letter-spacing: 0.5px; text-transform: uppercase;">Western<span style="position: absolute; top: -11px; right: -11px; width: 26px; height: 26px; border-radius: 50%; background: #BF2A1F; border: 3px solid #FFFFFF;"></span></h3>
-          <div style="flex: none; width: 230px; height: 230px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14); display: flex; align-items: center; justify-content: center; overflow: hidden;"><img width="400" height="213" decoding="async" loading="lazy" src="img/western.webp" alt="Pizza Western" style="width: 96%; height: auto; display: block;"></div>
+          <div class="fumant"><div style="flex: none; width: 230px; height: 230px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14); display: flex; align-items: center; justify-content: center; overflow: hidden;"><img width="400" height="213" decoding="async" loading="lazy" src="img/western.webp" alt="Pizza Western" style="width: 96%; height: auto; display: block;"></div><span class="vapeur" aria-hidden="true"><i></i><i></i><i></i></span></div>
           <p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: #5E574F; line-height: 1.5;">Crème fraîche, fromage, morceaux de poulet, poivrons, champignons</p>
           <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; align-self: stretch;">
             <div style="display: flex; flex-direction: column; align-items: center;"><span style="font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #5E574F;">JUNIOR</span><span style="font-family: Anton, Impact, sans-serif; font-size: 21px; color: #BF2A1F;">10,50€</span></div>
@@ -223,7 +242,7 @@ html:has(nav[aria-label="Catégories de la carte"]){scroll-padding-top:calc(var(
       
         <article style="display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center;">
           <h3 style="position: relative; margin: 0; align-self: stretch; border: 3px solid #1E1D1B; border-radius: 10px; background: #FFFFFF; padding: 8px 12px; font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 24px; letter-spacing: 0.5px; text-transform: uppercase;">Mexicaine<span style="position: absolute; top: -11px; right: -11px; width: 26px; height: 26px; border-radius: 50%; background: #BF2A1F; border: 3px solid #FFFFFF;"></span></h3>
-          <div style="flex: none; width: 230px; height: 230px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14); display: flex; align-items: center; justify-content: center; overflow: hidden;"><img width="400" height="213" decoding="async" loading="lazy" src="img/mexicaine.webp" alt="Pizza Mexicaine" style="width: 96%; height: auto; display: block;"></div>
+          <div class="fumant"><div style="flex: none; width: 230px; height: 230px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14); display: flex; align-items: center; justify-content: center; overflow: hidden;"><img width="400" height="213" decoding="async" loading="lazy" src="img/mexicaine.webp" alt="Pizza Mexicaine" style="width: 96%; height: auto; display: block;"></div><span class="vapeur" aria-hidden="true"><i></i><i></i><i></i></span></div>
           <p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: #5E574F; line-height: 1.5;">Sauce tomate, fromage, pepperoni, merguez, poivrons, olives</p>
           <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; align-self: stretch;">
             <div style="display: flex; flex-direction: column; align-items: center;"><span style="font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #5E574F;">JUNIOR</span><span style="font-family: Anton, Impact, sans-serif; font-size: 21px; color: #BF2A1F;">9,50€</span></div>
@@ -234,7 +253,7 @@ html:has(nav[aria-label="Catégories de la carte"]){scroll-padding-top:calc(var(
       
         <article style="display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center;">
           <h3 style="position: relative; margin: 0; align-self: stretch; border: 3px solid #1E1D1B; border-radius: 10px; background: #FFFFFF; padding: 8px 12px; font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 24px; letter-spacing: 0.5px; text-transform: uppercase;">Chicago<span style="position: absolute; top: -11px; right: -11px; width: 26px; height: 26px; border-radius: 50%; background: #BF2A1F; border: 3px solid #FFFFFF;"></span></h3>
-          <div style="flex: none; width: 230px; height: 230px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14); display: flex; align-items: center; justify-content: center; overflow: hidden;"><img width="400" height="213" decoding="async" loading="lazy" src="img/chicago.webp" alt="Pizza Chicago" style="width: 96%; height: auto; display: block;"></div>
+          <div class="fumant"><div style="flex: none; width: 230px; height: 230px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14); display: flex; align-items: center; justify-content: center; overflow: hidden;"><img width="400" height="213" decoding="async" loading="lazy" src="img/chicago.webp" alt="Pizza Chicago" style="width: 96%; height: auto; display: block;"></div><span class="vapeur" aria-hidden="true"><i></i><i></i><i></i></span></div>
           <p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: #5E574F; line-height: 1.5;">Crème fraîche, fromage, viande hachée, poulet fumé, œuf, cheddar</p>
           <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; align-self: stretch;">
             <div style="display: flex; flex-direction: column; align-items: center;"><span style="font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #5E574F;">JUNIOR</span><span style="font-family: Anton, Impact, sans-serif; font-size: 21px; color: #BF2A1F;">10,50€</span></div>
@@ -245,7 +264,7 @@ html:has(nav[aria-label="Catégories de la carte"]){scroll-padding-top:calc(var(
       
         <article style="display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center;">
           <h3 style="position: relative; margin: 0; align-self: stretch; border: 3px solid #1E1D1B; border-radius: 10px; background: #FFFFFF; padding: 8px 12px; font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 24px; letter-spacing: 0.5px; text-transform: uppercase;">4 Fromages<span style="position: absolute; top: -11px; right: -11px; width: 26px; height: 26px; border-radius: 50%; background: #BF2A1F; border: 3px solid #FFFFFF;"></span></h3>
-          <div style="flex: none; width: 230px; height: 230px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14); display: flex; align-items: center; justify-content: center; overflow: hidden;"><img width="400" height="213" decoding="async" loading="lazy" src="img/4-fromages.webp" alt="Pizza 4 Fromages" style="width: 96%; height: auto; display: block;"></div>
+          <div class="fumant"><div style="flex: none; width: 230px; height: 230px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14); display: flex; align-items: center; justify-content: center; overflow: hidden;"><img width="400" height="213" decoding="async" loading="lazy" src="img/4-fromages.webp" alt="Pizza 4 Fromages" style="width: 96%; height: auto; display: block;"></div><span class="vapeur" aria-hidden="true"><i></i><i></i><i></i></span></div>
           <p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: #5E574F; line-height: 1.5;">Sauce tomate, fromage, gorgonzola, parmesan, fromage râpé</p>
           <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; align-self: stretch;">
             <div style="display: flex; flex-direction: column; align-items: center;"><span style="font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #5E574F;">JUNIOR</span><span style="font-family: Anton, Impact, sans-serif; font-size: 21px; color: #BF2A1F;">9,50€</span></div>
@@ -459,6 +478,16 @@ document.addEventListener('DOMContentLoaded', function () {
   function aller() { if (!bouge) cible.scrollIntoView({ behavior: 'instant', block: 'start' }); }
   document.fonts.ready.then(function () { requestAnimationFrame(aller); });
   window.addEventListener('load', aller);
+})();
+</script>
+<script>
+(function () {
+  var assiettes = document.querySelectorAll('.fumant');
+  if (!assiettes.length || !window.IntersectionObserver) return;
+  var obs = new IntersectionObserver(function (entrees) {
+    entrees.forEach(function (e) { e.target.classList.toggle('actif', e.isIntersecting); });
+  }, { rootMargin: '0px 0px -10% 0px' });
+  assiettes.forEach(function (a) { obs.observe(a); });
 })();
 </script>
 </body></html>
