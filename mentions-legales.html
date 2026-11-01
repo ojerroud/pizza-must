@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mentions légales — Pizza Must</title>
+<meta name="description" content="Mentions légales et politique de confidentialité du site Pizza Must, Épinay-sur-Seine.">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Black+Ops+One&amp;family=DM+Sans:wght@400;500;700&amp;display=swap">
+<style>
+.lift{transition:transform .15s ease,box-shadow .15s ease}.lift:hover{transform:translateY(-4px);box-shadow:0 10px 0 rgba(30,29,27,.12)}
+.papier{background-color:#F4E7D2;background-image:linear-gradient(180deg,rgba(255,249,238,.6) 0%,rgba(255,249,238,0) 30%,rgba(222,160,104,.26) 100%),url(tex/papier.svg);background-size:100% 100%,800px auto;background-repeat:no-repeat,repeat}
+.four{background-color:#1F1612;background-image:radial-gradient(ellipse 80% 70% at 50% 115%,rgba(226,98,34,.55) 0%,rgba(191,42,31,.22) 45%,transparent 75%),radial-gradient(ellipse 60% 50% at 0% 0%,rgba(191,42,31,.18),transparent 70%),url(tex/papier.svg);background-blend-mode:normal,normal,multiply;background-size:100% 100%,100% 100%,800px auto}
+.bois{background-color:#5B3A21;background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.22) 0 2px,transparent 2px 68px),repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 1px,transparent 1px 9px)}
+.vichy{height:14px;background-color:#FFFFFF;background-image:linear-gradient(90deg,rgba(191,42,31,.55) 50%,transparent 50%),linear-gradient(rgba(191,42,31,.55) 50%,transparent 50%);background-size:16px 16px}
+.muret{background-color:#3A3A3D;background-image:linear-gradient(rgba(14,14,16,.40),rgba(14,14,16,.40)),url(tex/muret-gris.jpg);background-size:auto,cover;background-position:center;background-repeat:no-repeat}
+.muret-noir{background-color:#1E1E20;background-image:url(tex/muret-noir.jpg);background-size:max(100%,1100px) auto;background-position:top center;background-repeat:repeat-y}
+.fumee{background-color:#9C241B;background-image:url(tex/fumee-rouge.svg);background-size:cover;background-position:center}
+body{margin:0;background:#F4E9D8}
+a{color:#1E1D1B}a:hover{color:#B3170F}
+
+header{position:sticky;top:0;z-index:40;background:#F4E9D8;box-shadow:0 6px 16px rgba(0,0,0,.08)}
+html{scroll-padding-top:calc(var(--hh,0px) + 12px)}
+nav[aria-label="Catégories de la carte"]{top:var(--hh,0px) !important;z-index:30 !important}
+.barre-mobile{display:none}
+.barre-mobile a{min-height:56px;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-family:Anton,Impact,sans-serif;font-size:15px;text-transform:uppercase;text-decoration:none;box-sizing:border-box}
+@media (max-width:700px){
+  h1[style]{font-size:54px !important}
+  h2[style]{font-size:34px !important}
+  [style*="font-size: 78px"]{display:none !important}
+  h1[style*="Kaushan"]{font-size:40px !important;margin-top:0 !important}
+  [style*="font-size: 170px"],[style*="font-size: 150px"],[style*="font-size: 128px"]{font-size:96px !important}
+  .barre-mobile{display:grid;position:fixed;left:0;right:0;bottom:0;z-index:50;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:10px 12px 14px}
+  body{padding-bottom:84px}
+  header > div{padding:8px 16px !important;gap:8px 12px !important}
+  header a[aria-label$="accueil"] > span + span{display:none}
+  header a[aria-label$="accueil"] > span:first-child{width:52px !important;height:52px !important;font-size:14px !important}
+  .h-long{display:none !important}
+  .h-court{display:inline !important}
+  .bandeau-infos > div{padding:7px 14px !important;flex-wrap:nowrap !important;gap:10px !important;font-size:12.5px !important}
+  .bandeau-infos > div > span{gap:6px !important;white-space:nowrap}
+  .bandeau-infos > div > a{gap:6px !important;flex:none}
+  .bandeau-infos a > span[style*="width: 34px"]{width:24px !important;height:24px !important;font-size:6.5px !important;border-width:1px !important}
+  header a[aria-label^="Crêp"]{font-size:15px !important;padding:5px 10px !important;border-width:2px !important}
+  header nav .lien-voisin{display:flex !important;align-items:center;gap:12px;margin-top:10px;padding:12px 14px !important;border:2px solid currentColor !important;border-radius:10px;font-size:18px !important}
+  header > div > div, header > div > a[href^="tel:"]{display:none !important}
+  .burger{display:flex !important}
+  header nav{display:none !important;order:4;width:100%;flex-direction:column !important;flex-wrap:nowrap !important;gap:0 !important;padding:4px 0 10px}
+  header nav.ouvert{display:flex !important}
+  header nav a{padding:14px 2px;border-top:1px solid rgba(128,128,128,.3);font-size:22px}
+}
+.h-court{display:none}
+.lien-voisin{display:none}
+.burger{display:none;width:48px;height:48px;align-items:center;justify-content:center;border-radius:8px;border:2px solid currentColor;background:transparent;color:inherit;cursor:pointer;padding:0}
+.burger .i-close{display:none}
+.burger[aria-expanded="true"] .i-open{display:none}
+.burger[aria-expanded="true"] .i-close{display:block}
+</style>
+</head>
+<body>
+
+
+<div class="papier" style="font-family: 'DM Sans', system-ui, sans-serif; color: #1E1D1B; min-height: 100vh;">
+
+  <div class="bandeau-infos" style="background: #1E1D1B; color: #EDE6DA; font-size: 14px;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 8px 24px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; align-items: center;">
+      <span style="display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span class="h-long">Ouvert 7j/7 · 11h30–14h et 18h–23h · Week-end non-stop</span><span class="h-court">7j/7 · 11h30–14h · 18h–23h</span></span>
+      <a href="crepn-street/" style="display: inline-flex; align-items: center; gap: 10px; color: #EDE6DA; text-decoration: none;"><span class="h-long">Notre crêperie voisine</span><span style="padding: 3px 8px; border-radius: 4px; border: 2px solid #6E7378; background: linear-gradient(180deg, #ECEEF0 0%, #A9AEB4 52%, #D3D6DA 100%); font-family: 'Black Ops One', Impact, sans-serif; font-size: 13px; color: #2B2D30;">CRÊP'N STREET</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+    </div>
+  </div>
+
+  <header style="border-bottom: 3px solid #1E1D1B;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 12px 24px; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between;">
+      <a href="index.html" aria-label="Pizza Must, accueil" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #1E1D1B;">
+        <span style="width: 72px; height: 72px; border-radius: 50%; border: 3px solid #1E1D1B; box-shadow: inset 0 0 0 3px #FFFFFF, inset 0 0 0 5px #BF2A1F; background: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 0.92; font-family: Anton, Impact, sans-serif; font-size: 19px;"><span>PIZZA</span><span style="color: #BF2A1F;">MUST</span></span>
+        <span style="font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #5E574F; line-height: 1.3;">Goûtez et faites<br>la différence</span>
+      </a>
+      <nav id="menu-principal" aria-label="Navigation principale" style="display: flex; flex-wrap: wrap; gap: 8px 28px; font-family: Anton, Impact, sans-serif; font-size: 19px; letter-spacing: 0.5px; text-transform: uppercase;">
+        <a href="carte.html" style="text-decoration: none;">La carte</a>
+        <a href="index.html#offres" style="text-decoration: none;">Menus &amp; offres</a>
+        <a href="index.html#infos" style="text-decoration: none;">Infos pratiques</a>
+        <a href="allergenes.html" style="text-decoration: none;">Allergènes</a>
+      <a class="lien-voisin" href="crepn-street/" style="text-decoration: none;"><span style="padding: 4px 8px; border-radius: 4px; border: 2px solid #6E7378; background: linear-gradient(180deg, #ECEEF0 0%, #A9AEB4 52%, #D3D6DA 100%); font-family: 'Black Ops One', Impact, sans-serif; font-size: 13px; line-height: 0.95; color: #2B2D30; text-align: center;">CRÊP'N<br>STREET</span>Notre crêperie voisine<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-left:auto;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a></nav>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: #1F6B3A; background: #E3F1E6; padding: 6px 12px; border-radius: 999px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #1F8A46;"></span>Ouvert · ferme à 23h</span>
+        <a href="tel:+33149210033" style="display: inline-flex; align-items: center; gap: 8px; min-height: 50px; padding: 0 22px; border-radius: 8px; background: #BF2A1F; color: #FFFFFF; font-family: Anton, Impact, sans-serif; font-size: 21px; letter-spacing: 0.5px; text-decoration: none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>01 49 21 00 33</a>
+      </div><button type="button" class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-principal"><svg class="i-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg><svg class="i-close" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg></button>
+    </div>
+  </header>
+  <div class="vichy" aria-hidden="true"></div>
+  <main id="contenu" style="max-width: 1040px; margin: 0 auto; padding: 56px 24px 96px;"><div style="background: #FFFFFF; border: 3px solid #1E1D1B; border-radius: 14px; padding: 32px; font-size: 16px; line-height: 1.6;"><h1 style="margin: 0 0 12px; font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 54px; text-transform: uppercase;">Mentions légales</h1><p style="margin: 0 0 20px; padding: 12px 16px; border-radius: 10px; background: #FFF4D6; color: #5C4100; font-size: 15px;">Les champs marqués « à fournir » doivent être complétés par l'exploitant avant la mise en ligne définitive (obligation de la loi n° 2004-575 du 21 juin 2004, LCEN).</p><h2 style="margin: 36px 0 12px; font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 30px; text-transform: uppercase;">Éditeur du site</h2><p>Pizza Must — pizzeria<br>13 avenue de la Marne, 93800 Épinay-sur-Seine<br>Téléphone : 01 49 21 00 33<br>Forme juridique et capital : à fournir<br>RCS / SIRET : à fournir<br>N° de TVA intracommunautaire : à fournir<br>Directeur de la publication : à fournir</p><h2 style="margin: 36px 0 12px; font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 30px; text-transform: uppercase;">Hébergeur</h2><p>GitHub, Inc. — 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis — github.com</p><h2 style="margin: 36px 0 12px; font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 30px; text-transform: uppercase;">Propriété intellectuelle</h2><p>Les textes, photos et logos de ce site appartiennent à Pizza Must ou sont utilisés avec autorisation. Toute reproduction sans accord préalable est interdite.</p><h2 style="margin: 36px 0 12px; font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 30px; text-transform: uppercase;" id="confidentialite">Confidentialité et cookies</h2><p>Ce site ne comporte <strong>aucun formulaire, aucun compte client et aucun cookie de mesure d'audience ou publicitaire</strong>. Aucune donnée personnelle n'est collectée directement.</p><p>Certains contenus proviennent de services tiers qui peuvent recevoir votre adresse IP lors de l'affichage : les polices de caractères (Google Fonts) et le plan d'accès (OpenStreetMap). Les liens vers Uber Eats, Deliveroo et Google Maps vous redirigent vers ces services, soumis à leur propre politique de confidentialité.</p><p>Pour toute question, contactez-nous au 01 49 21 00 33. Vous pouvez aussi adresser une réclamation à la CNIL (cnil.fr).</p></div></main>
+  <footer style="background: #1E1D1B; color: #D6D0C6; font-size: 14px; border-top: 6px solid #BF2A1F;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 40px 24px; display: flex; flex-wrap: wrap; gap: 16px 40px; justify-content: space-between; align-items: center;">
+      <span>© Pizza Must · 13 avenue de la Marne · Épinay-sur-Seine</span>
+      <a href="crepn-street/" style="color: #EDE6DA;">Notre crêperie voisine : Crêp'N Street, 13 bis</a>
+      <nav aria-label="Liens légaux" style="display: flex; flex-wrap: wrap; gap: 8px 24px;">
+        <a href="allergenes.html" style="color: #EDE6DA;">Allergènes</a>
+        <a href="mentions-legales.html" style="color: #EDE6DA;">Mentions légales</a>
+        <a href="mentions-legales.html#confidentialite" style="color: #EDE6DA;">Confidentialité</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+
+
+
+
+<nav class="barre-mobile" aria-label="Actions rapides" style="background:#FFFFFF;border-top:3px solid #1E1D1B;"><a href="tel:+33149210033" style="background:#BF2A1F;color:#FFFFFF;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Appeler</a><a href="index.html#commander" style="background:#1E1D1B;color:#FFFFFF;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>Livraison</a><a href="https://www.google.com/maps/search/?api=1&amp;query=13+avenue+de+la+Marne+93800+Epinay-sur-Seine" style="background:#F4E9D8;color:#1E1D1B;border:2px solid #1E1D1B;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Itinéraire</a></nav>
+<script>
+(function () {
+  var h = document.querySelector('header'); if (!h) return;
+  function s() { document.documentElement.style.setProperty('--hh', h.offsetHeight + 'px'); }
+  s(); window.addEventListener('resize', s); window.addEventListener('load', s);
+  if (window.ResizeObserver) new ResizeObserver(s).observe(h);
+})();
+</script>
+<script>
+(function () {
+  var b = document.querySelector('.burger'), n = document.getElementById('menu-principal');
+  if (!b || !n) return;
+  function set(o) { n.classList.toggle('ouvert', o); b.setAttribute('aria-expanded', o); b.setAttribute('aria-label', o ? 'Fermer le menu' : 'Ouvrir le menu'); }
+  b.addEventListener('click', function () { set(!n.classList.contains('ouvert')); });
+  n.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { set(false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+})();
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var t = document.getElementById('menus-track');
+  var p = document.querySelector('[aria-label="Menus précédents"]');
+  var n = document.querySelector('[aria-label="Menus suivants"]');
+  if (!t || !p || !n) return;
+  p.addEventListener('click', function () { t.scrollBy({ left: -330, behavior: 'smooth' }); });
+  n.addEventListener('click', function () { t.scrollBy({ left: 330, behavior: 'smooth' }); });
+});
+</script>
+</body></html>
