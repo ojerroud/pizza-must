@@ -70,6 +70,9 @@ nav[aria-label="Catégories de la carte"] a[aria-current="true"]{background:#1E1
   nav[aria-label="Catégories de la carte"] > div > span{display:none !important}
   nav[aria-label="Catégories de la carte"] a{white-space:nowrap;font-size:15px !important;padding:0 12px !important}
 }
+
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+html:has(nav[aria-label="Catégories de la carte"]){scroll-padding-top:calc(var(--hh,0px) + 84px)}
 </style>
 <link rel="canonical" href="https://ojerroud.github.io/pizza-must/carte.html">
 <link rel="icon" type="image/svg+xml" href="favicon-pizza.svg">
@@ -105,8 +108,8 @@ nav[aria-label="Catégories de la carte"] a[aria-current="true"]{background:#1E1
       </a>
       <nav id="menu-principal" aria-label="Navigation principale" style="display: flex; flex-wrap: wrap; gap: 8px 28px; font-family: Anton, Impact, sans-serif; font-size: 19px; letter-spacing: 0.5px; text-transform: uppercase;">
         <a href="carte.html" style="text-decoration: none;">La carte</a>
-        <a href="index.html" style="text-decoration: none;">Menus &amp; offres</a>
-        <a href="index.html" style="text-decoration: none;">Infos pratiques</a>
+        <a href="index.html#offres" style="text-decoration: none;">Menus &amp; offres</a>
+        <a href="index.html#infos" style="text-decoration: none;">Infos pratiques</a>
         <a href="allergenes.html" style="text-decoration: none;">Allergènes</a>
       <a class="lien-voisin" href="crepn-street/" style="text-decoration: none;"><span style="padding: 4px 8px; border-radius: 4px; border: 2px solid #6E7378; background: linear-gradient(180deg, #ECEEF0 0%, #A9AEB4 52%, #D3D6DA 100%); font-family: 'Black Ops One', Impact, sans-serif; font-size: 13px; line-height: 0.95; color: #2B2D30; text-align: center;">CRÊP'N<br>STREET</span>Notre crêperie voisine<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-left:auto;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a></nav>
       <div style="display: flex; align-items: center; gap: 14px;">
@@ -149,7 +152,7 @@ nav[aria-label="Catégories de la carte"] a[aria-current="true"]{background:#1E1
         <span>Sauce en supplément (barbecue, chili thaï) : +0,50 €</span>
         <span>Pâte cheesy : croûte fourrée au St Môret</span>
         <span>Viandes halal · *jambon et lardons de dinde</span>
-        <a href="#" style="color: #FFFFFF;">Voir les allergènes</a>
+        <a href="allergenes.html" style="color: #FFFFFF;">Voir les allergènes</a>
       </div>
     </div>
     <p style="margin: 14px 0 0; font-size: 13px; color: #5E574F;">*À emporter, valable sur Sénior et Méga. Offre non cumulable.</p>
@@ -217,6 +220,18 @@ nav[aria-label="Catégories de la carte"] a[aria-current="true"]{background:#1E1
     entrees.forEach(function (e) { if (e.isIntersecting) actif(e.target.id); });
   }, { rootMargin: '-35% 0px -60% 0px' });
   liens.forEach(function (a) { var s = document.getElementById(a.getAttribute('href').slice(1)); if (s) obs.observe(s); });
+})();
+</script>
+<script>
+(function () {
+  if (!location.hash) return;
+  var cible = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (!cible) return;
+  var bouge = false;
+  ['wheel', 'touchstart', 'keydown'].forEach(function (e) { window.addEventListener(e, function () { bouge = true; }, { once: true, passive: true }); });
+  function aller() { if (!bouge) cible.scrollIntoView({ behavior: 'instant', block: 'start' }); }
+  document.fonts.ready.then(function () { requestAnimationFrame(aller); });
+  window.addEventListener('load', aller);
 })();
 </script>
 </body></html>

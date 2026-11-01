@@ -67,6 +67,9 @@ nav[aria-label="Catégories de la carte"] a[aria-current="true"]{background:#1E1
   nav[aria-label="Catégories de la carte"] > div > span{display:none !important}
   nav[aria-label="Catégories de la carte"] a{white-space:nowrap;font-size:15px !important;padding:0 12px !important}
 }
+
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+html:has(nav[aria-label="Catégories de la carte"]){scroll-padding-top:calc(var(--hh,0px) + 84px)}
 </style>
 <link rel="canonical" href="https://ojerroud.github.io/pizza-must/crepn-street/allergenes.html">
 <link rel="icon" type="image/svg+xml" href="../favicon-crepe.svg">
@@ -154,6 +157,18 @@ nav[aria-label="Catégories de la carte"] a[aria-current="true"]{background:#1E1
     entrees.forEach(function (e) { if (e.isIntersecting) actif(e.target.id); });
   }, { rootMargin: '-35% 0px -60% 0px' });
   liens.forEach(function (a) { var s = document.getElementById(a.getAttribute('href').slice(1)); if (s) obs.observe(s); });
+})();
+</script>
+<script>
+(function () {
+  if (!location.hash) return;
+  var cible = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (!cible) return;
+  var bouge = false;
+  ['wheel', 'touchstart', 'keydown'].forEach(function (e) { window.addEventListener(e, function () { bouge = true; }, { once: true, passive: true }); });
+  function aller() { if (!bouge) cible.scrollIntoView({ behavior: 'instant', block: 'start' }); }
+  document.fonts.ready.then(function () { requestAnimationFrame(aller); });
+  window.addEventListener('load', aller);
 })();
 </script>
 </body></html>
