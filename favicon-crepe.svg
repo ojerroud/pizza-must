@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ECEEF0"/><stop offset="0.52" stop-color="#A9AEB4"/><stop offset="1" stop-color="#D3D6DA"/>
+    </linearGradient>
+  </defs>
+  <rect x="3" y="10" width="58" height="44" rx="7" fill="url(#metal)" stroke="#6E7378" stroke-width="4"/>
+  <text x="32" y="42" text-anchor="middle" font-family="Impact, 'Arial Black', sans-serif" font-size="24" fill="#2B2D30">CS</text>
+</svg>
